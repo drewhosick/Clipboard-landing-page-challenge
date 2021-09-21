@@ -26,6 +26,7 @@ img {
     background-image: url("images/bg-header-mobile.png") ;
     background-repeat: no-repeat;
     text-align: center;
+    overflow: hidden;
 }
 
 .header {
@@ -39,15 +40,15 @@ img {
 .header__logo {
     display: block;
     margin:auto;
-    padding-top: 7.5rem;
-    padding-bottom: 4.5rem;    
+    margin-top: 7.5rem;
+    margin-bottom: 4.5rem;    
 }
 
 .header__title {
     font-size: 1.95rem;
     margin: auto;
     font-weight: 600;
-    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
 }
 
 .header__text {
@@ -56,31 +57,42 @@ img {
     font-weight: 400;
     color: hsl(201, 11%, 66%);
     line-height: 1.5rem;
-    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.header__downloadIos {
+.header__downloadButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: hsl(210, 10%, 33%);
+    margin-bottom: 10.5rem;
+    gap: 2rem;
+}
+
+.header__downloadButtons__downloadIos {
     background-color: hsl(171, 66%, 44%);
     color: white;
+    width: 19rem;
     font-size: 1.125rem;
     border-radius: 2.25rem;
     padding: .9rem;
     border: 0;
     font-weight: 600;
-    margin-bottom: 1.75rem;
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
 }
 
-.header__downloadMac {
+.header__downloadButtons__downloadMac {
     background-color: hsl(233, 100%, 69%);
     color: white;
+    width: 19rem;
     font-size: 1.125rem;
     border-radius: 2.25rem;
     padding: .9rem;
     border: 0;
     font-weight: 600;
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
-    margin-bottom: 10.5rem;
 }
 
 .header__secondTitle {
@@ -111,13 +123,13 @@ img {
     flex-direction: column;
     margin: auto;
     width: 100%;
-    padding-bottom: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .features__quickSearch-h3, .features__icloudSync-h3, .features__completeHistory-h3 {
     font-size: 1.6rem;
     font-weight: 600;
-    padding-bottom: .8rem;
+    margin-bottom: .8rem;
 }
 
 .features__quickSearch-p, .features__icloudSync-p, .features__completeHistory-p {
@@ -221,28 +233,41 @@ img {
     margin-bottom: 3rem;
 }
 
-.downloadOptions__downloadIos {
+.downloadOptions__downloadButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: hsl(210, 10%, 33%);
+    margin-bottom: 10.5rem;
+    gap: 2rem;
+    
+}
+
+.downloadOptions__downloadButtons__downloadIos {
     background-color: hsl(171, 66%, 44%);
     color: white;
     font-size: 1.125rem;
+    width: 19rem;
     border-radius: 2.25rem;
     padding: .9rem;
     border: 0;
     font-weight: 600;
-    margin-bottom: 1.75rem;
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
 }
 
-.downloadOptions__downloadMac {
+.downloadOptions__downloadButtons__downloadMac {
     background-color: hsl(233, 100%, 69%);
     color: white;
     font-size: 1.125rem;
+    width: 19rem;
     border-radius: 2.25rem;
     padding: .9rem;
     border: 0;
     font-weight: 600;
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
-    margin-bottom: 10.5rem;
+    
 }
 
 .bottomMenu {
@@ -268,8 +293,8 @@ img {
     margin-bottom: 2rem;
 }
 
-.bottomMenu__items_li {
-    text-decoration: none;
+.bottomMenu__items {
+    list-style: none;
 }
 
 .bottomMenu__social {
@@ -283,3 +308,137 @@ img {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@media screen and  (min-width: 1000px) {
+    .container {
+        max-width: 1440px;
+        background-image: url("images/bg-header-desktop.png") ;
+    }
+
+    .header__downloadButtons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 8.5rem;
+
+    }
+
+    .downloadOptions__downloadButtons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .header {
+        width: 53%;
+    }
+
+    .header__logo {
+        margin-bottom: 3.5rem;
+    }
+
+    .header__title {
+        font-size: 3rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .header__text {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        line-height: 2rem;
+    }
+
+    .header__downloadButtons {
+        gap: 1.2rem;
+    }
+
+    .header__secondTitle {
+        font-size: 2.8rem;
+    }
+
+    .header__text2 {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .features {
+        position: relative;
+        left: -9rem;
+        flex-direction: row;
+        width: 95%;
+        justify-content: left;
+        gap:2rem;
+        align-content: center;
+        margin-top: 3rem;
+    }
+    .features__computerImage {
+        max-width: 51.5rem;
+        margin-bottom: auto;
+    }
+
+    .features__featureList {
+        text-align: left;
+        max-width: 23rem;
+        margin: 0;
+        margin-top: 5rem;
+    }
+    
+    .pitchInfo {
+        width: 95%;
+    }
+    .pitchInfo__title {
+        font-size: 2.8rem;
+    }
+
+    .pitchInfo__text {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        width: 45rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6rem;
+    }
+
+    .pitchInfo__devicesPic {
+        max-width: 57rem;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    .pitchInfo_superchargeTitle {
+        font-size: 2.8rem;
+    }
+
+    .pitchInfo_superchargeText {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        width: 45rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .moreDetails {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+        max-width: 95%;
+    }
+
+    .moreDetails__blacklists-p, .moreDetails__textSnippets-p, .moreDetails__preview-p {
+        max-width: 22rem;
+    }
+
+    .supportedBy {
+        flex-direction: row;
+        gap: 5.8rem;
+        justify-content: center;
+        margin-bottom: 7.5rem;
+    }
+
+    .downloadOptions__title {
+        font-size: 2.8rem;
+    }
+}
+    
