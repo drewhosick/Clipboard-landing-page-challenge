@@ -83,6 +83,11 @@ img {
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
 }
 
+.header__downloadButtons__downloadIos:hover {
+    background-color: hsl(171, 66%, 49%);
+    cursor: pointer;
+}
+
 .header__downloadButtons__downloadMac {
     background-color: hsl(233, 100%, 69%);
     color: white;
@@ -93,6 +98,11 @@ img {
     border: 0;
     font-weight: 600;
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
+}
+
+.header__downloadButtons__downloadMac:hover {
+    background-color: hsl(233, 100%, 74%);
+    cursor: pointer;
 }
 
 .header__secondTitle {
@@ -257,6 +267,11 @@ img {
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
 }
 
+.downloadOptions__downloadButtons__downloadIos {
+    background-color: hsl(171, 66%, 49%);
+    cursor: pointer;
+}
+
 .downloadOptions__downloadButtons__downloadMac {
     background-color: hsl(233, 100%, 69%);
     color: white;
@@ -270,13 +285,17 @@ img {
     
 }
 
+.downloadOptions__downloadButtons__downloadMac {
+    background-color: hsl(233, 100%, 74%);
+    cursor: pointer;
+}
+
 .bottomMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: auto;
     background-color: hsl(201, 11%, 95%);
-    color: hsl(210, 10%, 33%);
 }
 
 .bottomMenu__logo {
@@ -291,10 +310,13 @@ img {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
+    list-style: none;
+    color: hsl(210, 10%, 33%);
 }
 
-.bottomMenu__items {
-    list-style: none;
+.bottomMenu__items-li:hover {
+    color: hsl(210, 10%, 63%);
+    cursor: pointer;
 }
 
 .bottomMenu__social {
@@ -303,6 +325,12 @@ img {
     gap: 2rem;
     margin:auto;
     margin-bottom: 2rem;
+}
+
+
+.bottomMenu__social__facebook:hover, .bottomMenu__social__twitter:hover, .bottomMenu__social__instagram:hover {
+    filter: invert(84%) sepia(9%) saturate(194%) hue-rotate(166deg) brightness(87%) contrast(91%);
+    cursor: pointer;
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -440,5 +468,39 @@ img {
     .downloadOptions__title {
         font-size: 2.8rem;
     }
+
+    .bottomMenu {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 100%;
+        align-content: center;
+        gap: 5rem;
+    }
+
+    .bottomMenu__logo {
+        flex: 1;
+        margin: 2rem 5rem 2rem 5rem;
+        
+    }
+
+    .bottomMenu__items {
+        flex: 12;
+        margin: auto;
+        margin-right: 2rem;
+
+        height: 5rem;
+        flex-wrap: wrap;
+        text-align: left;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .bottomMenu__social {
+        flex: 5;
+        margin: auto;
+    }
+
+    
 }
     
