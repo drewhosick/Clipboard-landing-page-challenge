@@ -267,7 +267,7 @@ img {
     box-shadow: 0px 2px 2px hsl(171, 66%, 24%);
 }
 
-.downloadOptions__downloadButtons__downloadIos {
+.downloadOptions__downloadButtons__downloadIos:hover {
     background-color: hsl(171, 66%, 49%);
     cursor: pointer;
 }
@@ -285,7 +285,7 @@ img {
     
 }
 
-.downloadOptions__downloadButtons__downloadMac {
+.downloadOptions__downloadButtons__downloadMac:hover {
     background-color: hsl(233, 100%, 74%);
     cursor: pointer;
 }
